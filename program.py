@@ -13,7 +13,7 @@ def program():
 
     for num in range(15):
         print('O')
-    
+#jgfhfdsuidfuhgrshgsdakhndsagkjhngdsauhgdsauohgsd9uohdsgouhasguosahgueasghuasgouigasd
     time.sleep(0.8)
     print('W')
     print('A')
