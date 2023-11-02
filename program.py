@@ -20,3 +20,4 @@ def program():
     print('H')
     for num in range(350):
         print('O')
+        print('IDDSKJAKDJASKD')
