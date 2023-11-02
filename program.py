@@ -17,3 +17,4 @@ print('A')
 print('H')
 for num in range(110):
     print('0')
+#jgfhfdsuidfuhgrshgsdakhndsagkjhngdsauhgdsauohgsd9uohdsgouhasguosahgueasghuasgouigasd
