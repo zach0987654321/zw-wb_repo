@@ -1,23 +1,17 @@
-def program():
-    import time
-
-    print('N')
-    for num in range(300):
-        print('I')
-    
-    print('N')
-    print('T')
-    print('E')
-    print('N')
-    print('D')
-
-    for num in range(15):
-        print('O')
-#jgfhfdsuidfuhgrshgsdakhndsagkjhngdsauhgdsauohgsd9uohdsgouhasguosahgueasghuasgouigasd
-    time.sleep(0.8)
-    print('W')
-    print('A')
-    print('H')
-    for num in range(350):
-        print('O')
-        print('IDDSKJAKDJASKD')
+def main():
+    RANGEMAX=1000
+    RANGEMIN=1
+    print(player1, player2)
+    choice=1
+    while choice!=3:
+        choice=menu()
+        if choice==2:
+            RANGEMAX=ranged_randomint()
+            RANGEMIN=ranged_randomint()
+        elif choice==1:
+            player=player_name()
+            player1=player[0]
+            player2=player[1]
+        elif choice==3:
+            exit
+            
