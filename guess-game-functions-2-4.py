@@ -12,7 +12,7 @@ def menu():
     print('3.\tExit')
     
     choice = int(input(''))
-    while choice =< 0.9 or => 3.1:
+    while choice <= 0.9 or => 3.1:
         choice = int(input('Enter a number between 1 and 3: '))
     
     return choice
