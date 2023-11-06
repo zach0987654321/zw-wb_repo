@@ -12,14 +12,14 @@ def main():
             player=player_name()
             player1=player[0]
             player2=player[1]
+            generated_number=ranged_random_int(RANGEMIN,RANGEMAX)
+            print("The range is: ", RANGEMIN, "-", RANGEMAX)
+            guess_game(generated_number,player1, player2, RANGEMAX, RANGEMIN)
         elif choice==3:
-            exit
+            print()
         else:
             print("YOU DID NOT TYPE A VALID NUMBER")
             main()
-    generated_number=ranged_random_int(RANGEMIN,RANGEMAX)
-    print("The range is: ", RANGEMIN, "-", RANGEMAX)
-    guess_game(generated_number,player1, player2, RANGEMAX, RANGEMIN)
 def menu():
     import time
 #Return choice
