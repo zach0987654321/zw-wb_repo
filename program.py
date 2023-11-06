@@ -12,13 +12,14 @@ def main():
             player=player_name()
             player1=player[0]
             player2=player[1]
+            generated_number=ranged_random_int(RANGEMIN,RANGEMAX)
+            print("The range is: ", RANGEMIN, "-", RANGEMAX)
+            guess_game(generated_number,player1, player2, RANGEMAX, RANGEMIN)
         elif choice==3:
-            exit
+            print()
         else:
             print("YOU DID NOT TYPE A VALID NUMBER")
             main()
-    generated_number=ranged_random_int(RANGEMIN,RANGEMAX)
-    guess_game(generated_number,player1, player2)
 def menu():
     import time
 #Return choice
@@ -67,23 +68,46 @@ def ranged_random_int(min_num, max_num):
     
     return generated_number
     
-def guess_game(number,player1,player2):
+def guess_game(number,player1,player2,RANGEMAX, RANGEMIN):
     roundnumber=1
     answer1=-100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     answer2=-100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     while answer1!=number or answer2!=number:
         print("Round", roundnumber)
-        print(number)
+        print("")
         print("What is the random number", player1,"?")
+        print("")
         answer1=float(input())
         answer1=round(answer1)
+        while answer1<RANGEMIN or answer1>RANGEMAX:
+            answer1=float(input("INPUT A NUMBER IN THE RANGE:"))
+        if answer1==number:
+            print("YOU WIN", player1)
+            main()
+        elif answer2==number:
+            print("YOU WIN", player2)
+            main()
+        elif answer1<number:
+            print("The number is greater")
+        elif answer1>number:
+            print("The number is less")
+        print("")
         print("What is the random number", player2,"?")
         answer2=float(input())
-        answer2=round(answer1)
+        answer2=round(answer2)
+        while answer2<RANGEMIN or answer2>RANGEMAX:
+            answer2=float(input("INPUT A NUMBER IN THE RANGE"))
+        if answer1==number:
+            print("YOU WIN", player1)
+            main()
+        elif answer2==number:
+            print("YOU WIN", player2)
+            main()
+        elif answer2<number:
+            print("The number is greater")
+        elif answer2>number:
+            print("The number is less")
+        print("")
         roundnumber+=1
-    if answer1==number:
-        print("YOU WIN", player1)
-    elif answer2==number:
-        print("YOU WIN", player2)
-
+        
             
