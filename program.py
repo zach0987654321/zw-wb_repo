@@ -17,6 +17,7 @@ def main():
             guess_game(generated_number,player1, player2, RANGEMAX, RANGEMIN)
         elif choice==3:
             print()
+            choice=1
         else:
             print("YOU DID NOT TYPE A VALID NUMBER")
             main()
